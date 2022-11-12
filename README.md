@@ -1,5 +1,5 @@
 # notify
-notification twitter and all
+Notification system by dakom#7549 for fivem (use for twitter, youtube, twitch and all socials ...)
 
 
 **Icon Name find here:** https://fontawesome.com/icons<br>
