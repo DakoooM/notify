@@ -1,0 +1,41 @@
+.notification {
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    visibility: hidden;
+    opacity: 0;
+    font-family: sans-serif;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 500px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #275aa6a0;
+    color: white;
+
+    *, ::before, ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .author {
+        font-weight: bold;
+        font-size: 17px;
+        user-select: none;
+        margin: 0 0 10px 0;
+    }
+
+    .text {
+        font-size: 14px;
+        color: #dcdcdc;
+    }
+}

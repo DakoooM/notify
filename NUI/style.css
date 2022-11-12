@@ -1,0 +1,40 @@
+.notification {
+  visibility: hidden;
+  opacity: 0;
+  font-family: sans-serif;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  min-width: 500px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(39, 90, 166, 0.6274509804);
+  color: white;
+}
+.notification.show {
+  visibility: visible;
+  opacity: 1;
+}
+.notification *, .notification ::before, .notification ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.notification .author {
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0 0 10px 0;
+}
+.notification .text {
+  font-size: 14px;
+  color: #dcdcdc;
+}/*# sourceMappingURL=style.css.map */
