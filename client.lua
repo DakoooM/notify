@@ -1,4 +1,4 @@
-function addNotification(param)
+function addNotification(param, timeout)
     SendNUIMessage({
         action = "notify",
         author = param.author or "User#1054",
@@ -14,16 +14,9 @@ function addNotification(param)
     end
 end
 
---[[ 
-    for change icon use this link:
-    https://fontawesome.com/icons
+RegisterNetEvent("notify:addNotification")
+AddEventHandler("notify:addNotification", function(param, timeout)
+    addNotification(param, timeout or 15)
+end)
 
-    Example usage: 
-    exports["nomdelaresource"]:addNotification({
-        author = "user", 
-        text = "testing", 
-        color = "orange",
-        icon = "fa-brands fa-youtube"
-    }, 5)
-]]
 exports("addNotification", addNotification);
