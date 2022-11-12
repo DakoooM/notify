@@ -6,6 +6,12 @@ function addNotification(param)
         color = param.color or "red",
         icon = param.icon or nil
     })
+    
+    if timeout and tonumber(timeout) then
+        SetTimeout(timeout * 1000, function() 
+            SendNUIMessage({action = "notify"});
+        end)
+    end
 end
 
 --[[ 
@@ -18,6 +24,6 @@ end
         text = "testing", 
         color = "orange",
         icon = "fa-brands fa-youtube"
-    })
+    }, 5)
 ]]
 exports("addNotification", addNotification);
